@@ -1,0 +1,63 @@
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;800&display=swap');
+
+
+/* General style rules */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+h1, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* Color palette */
+$light-brown: #D3BE9D;
+$black: #0F0C0A;
+$orange: #D80D05;
+$light-gray: #B6A489;
+
+
+/* Main grid */
+body {
+  height: 100vh;
+  padding: 5vh 5vw;
+  display: grid;
+  align-content: space-between;
+  background: $light-brown;
+}
+
+
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  color: $orange;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  font-size: 1.3rem;
+  gap: 6vw;
+}
