@@ -1,8 +1,17 @@
-/* Import */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;800&display=swap');
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;800&');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
 
 
-/* General style rules */
+// Variables
+$light-brown: #EBE0CE;
+$black: #272624;
+$orange: #ED3C20;
+$light-gray: #969087;
+$system-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+
+// General rules
 *,
 *::after,
 *::before {
@@ -10,7 +19,8 @@
 }
 
 body {
-  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Mulish', $system-font-stack;
+  color: $black;
 }
 
 h1, ul {
@@ -22,25 +32,23 @@ ul {
   list-style: none;
 }
 
-
-/* Color palette */
-$light-brown: #D3BE9D;
-$black: #0F0C0A;
-$orange: #D80D05;
-$light-gray: #B6A489;
+button {
+  cursor: pointer;
+}
 
 
-/* Main grid */
+// Main grid
 body {
   height: 100vh;
-  padding: 5vh 5vw;
+  padding: 6vh 5vw;
   display: grid;
-  align-content: space-between;
+  grid-template-rows: auto 1fr auto;
+  gap: 32px;
   background: $light-brown;
 }
 
 
-/* Header */
+// Header
 header {
   display: grid;
   grid-template-columns: auto auto;
@@ -49,10 +57,11 @@ header {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 800;
   letter-spacing: 0.5rem;
   color: $orange;
+  cursor: default;
 }
 
 nav ul {
@@ -60,4 +69,102 @@ nav ul {
   grid-template-columns: repeat(3, auto);
   font-size: 1.3rem;
   gap: 6vw;
+}
+
+
+// Main - Home
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+.left-section {
+  display: grid;
+  justify-items: start;
+  gap: 2vh;
+}
+
+.jap-phrase {
+  font-size: 3rem;
+  font-family: 'M PLUS Rounded 1c', $system-font-stack;
+  color: $orange;
+}
+
+.wavy-line {
+  // Ratio -> font-size / letter-spacing = 6.25
+  letter-spacing: -0.368rem;
+  font-size: 2.3rem;
+  color: $black;
+}
+
+.motto {
+  display: grid;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+
+  div:nth-child(2) {
+    color: $orange;
+  }
+}
+
+.description {
+  font-size: 1.15rem;
+}
+
+.order {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  background: $orange;
+  color: white;
+  margin-top: 1.5vh;
+}
+
+.right-section {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  img {
+    width: 50%;
+  }
+}
+
+
+// Footer
+footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 4vw;
+  font-size: 1.15rem;
+  color: $orange;
+
+  ul {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(3, auto);
+    gap: 4vw;
+  }
+
+  a {
+    color: $orange;
+  }
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: $orange;
+}
+
+.fa-github {
+  font-size: 2.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+  
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+  opacity: 1;
 }
