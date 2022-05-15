@@ -34,6 +34,14 @@ ul {
 
 button {
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 
@@ -69,6 +77,15 @@ nav ul {
   grid-template-columns: repeat(3, auto);
   font-size: 1.3rem;
   gap: 6vw;
+
+  li {
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
 }
 
 
@@ -139,7 +156,6 @@ footer {
   align-items: center;
   gap: 4vw;
   font-size: 1.15rem;
-  color: $orange;
 
   ul {
     display: grid;
@@ -150,6 +166,17 @@ footer {
 
   a {
     color: $orange;
+    text-decoration: none;
+  }
+
+  li a {
+    &:hover {
+      color: darken($orange, 8%);
+    }
+
+    &:active {
+      color: darken($orange, 12%);
+    }
   }
 }
 
