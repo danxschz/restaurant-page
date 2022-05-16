@@ -1,4 +1,4 @@
-import locationImg from './location.png';
+import locationImg from './assets/location.png';
 
 const contactUs = (() => {
   const build = () => {
