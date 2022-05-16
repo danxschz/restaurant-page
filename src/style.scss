@@ -44,7 +44,10 @@ button {
   }
 }
 
-
+a {
+  color: $orange;
+  text-decoration: none;
+}
 // Main grid
 body {
   height: 100vh;
@@ -145,7 +148,7 @@ nav ul {
   font-size: 1.15rem;
 }
 
-.order {
+.order-button {
   padding: 12px 30px;
   border: none;
   border-radius: 4px;
@@ -181,6 +184,11 @@ nav ul {
 
   img {
     width: 80%;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(80%);
+      //opacity: 0.9;
+    }
   }
 }
 
@@ -266,6 +274,7 @@ nav ul {
 
 .phones__title, .address__title {
   color: $orange;
+  font-weight: 700;
 }
 
 

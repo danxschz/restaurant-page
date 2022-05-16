@@ -120,6 +120,7 @@ homeButton.addEventListener('click', ()=> {
   buildHome();
   removeSelected();
   homeButton.classList.add('selected');
+  document.title = 'Home - Yumi';
 })
 
 const buildContact = () => {
@@ -164,7 +165,7 @@ const buildContact = () => {
 
   let phonesTitle = document.createElement('div');
   phonesTitle.classList.add('phones__title');
-  phonesTitle.textContent = 'Phones';
+  phonesTitle.textContent = 'Phone Numbers';
   phones.appendChild(phonesTitle);
 
   for (let i = 0; i < 2; i++) {
