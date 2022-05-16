@@ -8,7 +8,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    //new FaviconsWebpackPlugin('./src/logo.png'),
+    new FaviconsWebpackPlugin('./src/assets/logo.png'),
   ],
   output: {
     filename: 'main.js',
