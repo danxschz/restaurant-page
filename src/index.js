@@ -1,6 +1,7 @@
 import './normalize.css';
 import './style.scss';
-import html from "./index.html";
+import html from './index.html';
+import home from './home.js';
 import menu from './menu.js';
 import contactUs from './contact-us.js';
 
@@ -19,19 +20,6 @@ const tabs = (() => {
   }
 
   return {clearMain, removeSelected}
-})();
-
-const home = (() => {
-  let main = document.querySelector('main');
-  let mainHome = main.cloneNode(true);
-
-  const build = () => {
-    main = document.querySelector('main');
-    main.parentNode.replaceChild(mainHome, main);
-    document.title = 'Home - Yumi';
-  }
-
-  return {build};
 })();
 
 let homeButton = document.querySelector('.home-button')
