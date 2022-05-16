@@ -48,6 +48,8 @@ a {
   color: $orange;
   text-decoration: none;
 }
+
+
 // Main grid
 body {
   height: 100vh;
@@ -72,7 +74,6 @@ header {
   font-weight: 800;
   letter-spacing: 0.5rem;
   color: $orange;
-  cursor: default;
 }
 
 nav ul {
@@ -84,12 +85,14 @@ nav ul {
   li {
     transition: color 0.3s;
     cursor: pointer;
-    padding-bottom: 5px;
-    position: relative;
 
     &:hover {
       color: $orange;
     }
+
+    // Required for partial underline
+    padding-bottom: 5px;
+    position: relative;
   }
 }
 
@@ -97,13 +100,14 @@ nav ul {
   color: $orange;
 }
 
+// Partial underline
 .selected::before {
   content: "";
   position: absolute;
   width: 1rem;
-  height: 1px;
+  height: 2px;
   bottom: 0;
-  border-bottom: 2px solid $black;
+  background: $black;
 }
 
 
@@ -114,7 +118,7 @@ nav ul {
   align-content: center;
 }
 
-.left-section {
+.home__left-section {
   display: grid;
   justify-items: start;
   gap: 2vh;
@@ -128,8 +132,8 @@ nav ul {
 
 .wavy-line {
   // Ratio -> font-size / letter-spacing = 6.25
-  letter-spacing: -0.368rem;
   font-size: 2.3rem;
+  letter-spacing: -0.368rem;
   color: $black;
 }
 
@@ -152,15 +156,16 @@ nav ul {
   padding: 12px 30px;
   border: none;
   border-radius: 4px;
+  margin-top: 1.5vh;
   background: $orange;
   color: white;
-  margin-top: 1.5vh;
 }
 
-.right-section {
+.home__right-section {
   display: grid;
   place-content: center;
   place-items: center;
+
   img {
     width: 55%;
   }
@@ -225,7 +230,7 @@ nav ul {
   max-width: 500px;
 }
 
-.close {
+.close-button {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -293,11 +298,6 @@ footer {
     gap: 4vw;
   }
 
-  a {
-    color: $orange;
-    text-decoration: none;
-  }
-
   li a {
     &:hover {
       color: darken($orange, 8%);
@@ -322,5 +322,4 @@ footer {
   
 .fa-github:hover {
   transform: rotate(360deg) scale(1.2);
-  opacity: 1;
 }
