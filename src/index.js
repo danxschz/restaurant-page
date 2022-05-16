@@ -4,46 +4,55 @@ import html from "./index.html";
 import menu from './menu.js';
 import contactUs from './contact-us.js';
 
-const clearMain = () => {
+const tabs = (() => {
+  const clearMain = () => {
+    let main = document.querySelector('main');
+    let mainNew = main.cloneNode(false);
+    main.parentNode.replaceChild(mainNew, main);
+  }
+
+  const removeSelected = () => {
+    let navButtons = document.querySelectorAll('nav li')
+    navButtons.forEach(button => {
+    button.classList.remove('selected');
+    });
+  }
+
+  return {clearMain, removeSelected}
+})();
+
+const home = (() => {
   let main = document.querySelector('main');
-  let mainNew = main.cloneNode(false);
-  main.parentNode.replaceChild(mainNew, main);
-}
+  let mainHome = main.cloneNode(true);
 
-let main = document.querySelector('main');
-let mainNew = main.cloneNode(true);
-const buildHome = () => {
-  main = document.querySelector('main');
-  main.parentNode.replaceChild(mainNew, main);
-}
+  const build = () => {
+    main = document.querySelector('main');
+    main.parentNode.replaceChild(mainHome, main);
+    document.title = 'Home - Yumi';
+  }
 
-const removeSelected = () => {
-  let navButtons = document.querySelectorAll('nav li')
-  navButtons.forEach(button => {
-  button.classList.remove('selected');
-  });
-}
-
-let menuButton = document.querySelector('.menu-button')
-menuButton.addEventListener('click', ()=> {
-  clearMain();
-  menu.build();
-  removeSelected();
-  menuButton.classList.add('selected');
-})
+  return {build};
+})();
 
 let homeButton = document.querySelector('.home-button')
 homeButton.addEventListener('click', ()=> {
-  buildHome();
-  removeSelected();
+  tabs.removeSelected();
+  home.build();
   homeButton.classList.add('selected');
-  document.title = 'Home - Yumi';
+})
+
+let menuButton = document.querySelector('.menu-button')
+menuButton.addEventListener('click', ()=> {
+  tabs.clearMain();
+  tabs.removeSelected();
+  menu.build();
+  menuButton.classList.add('selected');
 })
 
 let contactButton = document.querySelector('.contact-button');
 contactButton.addEventListener('click', ()=> {
-  clearMain();
+  tabs.clearMain();
+  tabs.removeSelected();
   contactUs.build();
-  removeSelected();
   contactButton.classList.add('selected');
 })
