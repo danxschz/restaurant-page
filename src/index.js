@@ -1,9 +1,12 @@
 import './normalize.css';
 import './style.scss';
+// Keep html import to avoid imgs disappearing on webpack --watch
 import html from './index.html';
-import home from './home.js';
+import setHome, { cloneHome } from './setHome';
 import menu from './menu.js';
 import contactUs from './contact-us.js';
+
+const homeMain = cloneHome();
 
 const tabs = (() => {
   const clearMain = () => {
@@ -25,7 +28,7 @@ const tabs = (() => {
 let homeButton = document.querySelector('.home-button')
 homeButton.addEventListener('click', ()=> {
   tabs.removeSelected();
-  home.build();
+  setHome(homeMain);
   homeButton.classList.add('selected');
 })
 
