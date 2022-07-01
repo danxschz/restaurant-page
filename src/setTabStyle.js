@@ -3,10 +3,11 @@ const clearMain = () => {
   main.replaceChildren();
 }
 
-const removeSelected = () => {
+const setTabStyle = (e) => {
   const navBtns = document.querySelectorAll('nav li');
   navBtns.forEach((btn) => btn.classList.remove('selected'));
+  e.target.classList.add('selected');
 }
 
-export default removeSelected;
+export default setTabStyle;
 export { clearMain };
