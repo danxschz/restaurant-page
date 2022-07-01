@@ -1,11 +1,12 @@
 const cloneHome = () => {
-  const mainHome = document.querySelector('main');
-  return mainHome.cloneNode(true);
+  const main = document.querySelector('main');
+  return main.cloneNode(true);
 }
 
-const setHome = (mainHome) => {
+const setHome = (homeElement) => {
   const main = document.querySelector('main');
-  main.parentNode.replaceChild(mainHome, main);
+  const homeClone = homeElement.cloneNode(true);
+  main.parentNode.replaceChild(homeClone, main);
   document.title = 'Yumi';
 }
 
