@@ -6,7 +6,7 @@ import html from './index.html';
 import setTabStyle, { clearMain } from './setTabStyle';
 import setHome, { cloneHome } from './setHome';
 import menu from './menu.js';
-import contactUs from './contact-us.js';
+import setContactUs from './setContactUs';
 
 const homeElement = cloneHome();
 const homeBtn = document.querySelector('.home-button')
@@ -26,5 +26,5 @@ const contactBtn = document.querySelector('.contact-button');
 contactBtn.addEventListener('click', (e) => {
   clearMain();
   setTabStyle(e);
-  contactUs.build();
+  setContactUs();
 })

@@ -262,6 +262,10 @@ nav ul {
   gap: 2vh;
 }
 
+.contact__title {
+  text-transform: uppercase;
+}
+
 .contact__title div:nth-child(2) {
   color: $orange;
 }

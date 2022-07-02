@@ -20,7 +20,7 @@
   "homepage": "https://github.com/danxschz/restaurant-page#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "generate-element": "^1.0.4",
+    "generate-element": "^1.0.3",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.51.0",
