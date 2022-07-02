@@ -117,7 +117,7 @@ nav ul {
   align-content: center;
 }
 
-.home__left-section {
+.hero {
   display: grid;
   justify-items: start;
   gap: 2vh;
@@ -151,7 +151,7 @@ nav ul {
   font-size: 1.15rem;
 }
 
-.order-button {
+.order-btn {
   padding: 12px 30px;
   border: none;
   border-radius: 4px;
@@ -160,7 +160,7 @@ nav ul {
   color: white;
 }
 
-.home__right-section {
+.hero-img {
   display: grid;
   place-content: center;
   place-items: center;
@@ -311,7 +311,7 @@ footer {
   }
 }
 
-.line {
+.footer__line {
   height: 1px;
   width: 100%;
   background: $orange;

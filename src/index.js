@@ -9,20 +9,20 @@ import menu from './menu.js';
 import setContactUs from './setContactUs';
 
 const homeElement = cloneHome();
-const homeBtn = document.querySelector('.home-button')
+const homeBtn = document.querySelector('.nav__home')
 homeBtn.addEventListener('click', (e) => {
   setTabStyle(e);
   setHome(homeElement);
 })
 
-const menuBtn = document.querySelector('.menu-button')
+const menuBtn = document.querySelector('.nav__menu')
 menuBtn.addEventListener('click', (e) => {
   clearMain();
   setTabStyle(e);
   menu.build();
 })
 
-const contactBtn = document.querySelector('.contact-button');
+const contactBtn = document.querySelector('.nav__contact');
 contactBtn.addEventListener('click', (e) => {
   clearMain();
   setTabStyle(e);
