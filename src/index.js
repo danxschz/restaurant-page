@@ -5,7 +5,7 @@ import './style.scss';
 import html from './index.html';
 import setTabStyle, { clearMain } from './setTabStyle';
 import setHome, { cloneHome } from './setHome';
-import menu from './menu.js';
+import setMenu from './setMenu';
 import setContactUs from './setContactUs';
 
 const homeElement = cloneHome();
@@ -19,7 +19,7 @@ const menuBtn = document.querySelector('.nav__menu')
 menuBtn.addEventListener('click', (e) => {
   clearMain();
   setTabStyle(e);
-  menu.build();
+  setMenu();
 })
 
 const contactBtn = document.querySelector('.nav__contact');
