@@ -13,7 +13,7 @@ const setContactUs = () => {
   const wavyLine = generateElement('div', 'wavy-line', '∿∿∿∿∿∿∿');
   heading.appendChild(wavyLine);
 
-  const title = generateElement('div', 'contact__title');
+  const title = generateElement('h1', 'contact__title');
   const line1 = generateElement('div', false, 'Contact');
   title.appendChild(line1);
   const line2 = generateElement('div', false, 'Information');

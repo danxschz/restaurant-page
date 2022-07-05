@@ -1,14 +1,12 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
-
 // Variables
-$light-brown: #EBE0CE;
-$black: #272624;
-$orange: #ED3C20;
+$primary-color: #EBE0CE;
+$accent-color: #ED3C20;
+$text-color: #272624;
 $system-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-
 
 // General rules
 *,
@@ -19,15 +17,15 @@ $system-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, sego
 
 body {
   font-family: 'Mulish', $system-font-stack;
-  color: $black;
+  color: $text-color;
 }
 
 h1, ul {
   margin: 0;
-  padding: 0;
 }
 
 ul {
+  padding: 0;
   list-style: none;
 }
 
@@ -44,26 +42,23 @@ button {
 }
 
 a {
-  color: $orange;
+  color: $accent-color;
   text-decoration: none;
 }
 
-
 // Main grid
 body {
-  height: 100vh;
-  padding: 6vh 5vw;
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 32px;
-  background: $light-brown;
+  padding: 6vh 5vw;
+  min-height: 100vh;
+  background: $primary-color;
 }
-
 
 // Header
 header {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -72,21 +67,20 @@ header {
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: 0.5rem;
-  color: $orange;
+  color: $accent-color;
 }
 
 nav ul {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  font-size: 1.2rem;
+  display: flex;
   gap: 6vw;
+  font-size: 1.2rem;
 
   li {
     transition: color 0.3s;
     cursor: pointer;
 
     &:hover {
-      color: $orange;
+      color: $accent-color;
     }
 
     // Required for partial underline
@@ -96,7 +90,7 @@ nav ul {
 }
 
 .selected {
-  color: $orange;
+  color: $accent-color;
 }
 
 // Partial underline
@@ -106,9 +100,8 @@ nav ul {
   width: 1rem;
   height: 2px;
   bottom: 0;
-  background: $black;
+  background: $text-color;
 }
-
 
 // Main - Home
 .home {
@@ -119,21 +112,20 @@ nav ul {
 
 .hero {
   display: grid;
-  justify-items: start;
   gap: 2vh;
 }
 
 .jap-phrase {
   font-size: 3rem;
   font-family: 'Noto Sans JP', $system-font-stack;
-  color: $orange;
+  color: $accent-color;
 }
 
 .wavy-line {
-  // Ratio -> font-size / letter-spacing = 6.25
+  // Letter spacing = (font-size / 6.25) * -1
   font-size: 2.3rem;
   letter-spacing: -0.368rem;
-  color: $black;
+  color: $text-color;
 }
 
 .motto {
@@ -143,7 +135,7 @@ nav ul {
   font-weight: 800;
 
   div:nth-child(2) {
-    color: $orange;
+    color: $accent-color;
   }
 }
 
@@ -156,20 +148,21 @@ nav ul {
   border: none;
   border-radius: 4px;
   margin-top: 1.5vh;
-  background: $orange;
+  background: $accent-color;
   color: white;
+  font-weight: 500;
+  justify-self: start;
 }
 
 .hero-img {
-  display: grid;
-  place-content: center;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    width: 50%;
+    width: clamp(100px, 45%, 550px);
   }
 }
-
 
 // Main - Menu
 .menu {
@@ -196,7 +189,7 @@ nav ul {
 }
 
 .dish__title {
-  color: $orange;
+  color: $accent-color;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -232,81 +225,79 @@ nav ul {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: $orange;
+  color: $accent-color;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
 
   &:hover {
-    color: lighten($orange, 6%);
+    color: lighten($accent-color, 6%);
   }
 }
-
 
 // Main - Contact 
 .contact {
   display: grid;
   grid-template-columns: auto 1fr;
+  align-items: center;
 
   img {
-    width: 50%;
+    width: 45%;
   }
 }
 
 .contact__heading {
-  display: grid;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
   font-size: 3rem;
   font-weight: 800;
-  gap: 2vh;
 }
 
 .contact__title {
+  font-size: 3rem;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
 .contact__title div:nth-child(2) {
-  color: $orange;
+  color: $accent-color;
 }
 
 .contact__info {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2vh;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .phones__title, .address__title {
-  color: $orange;
+  color: $accent-color;
   font-weight: 700;
 }
 
-
 // Footer
 footer {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
   gap: 4vw;
   font-size: 1.15rem;
 
   ul {
-    display: grid;
-    justify-content: start;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
     gap: 4vw;
   }
 
   li a {
     &:hover {
-      color: darken($orange, 8%);
+      color: darken($accent-color, 8%);
     }
 
     &:active {
-      color: darken($orange, 12%);
+      color: darken($accent-color, 12%);
     }
   }
 }
@@ -314,7 +305,7 @@ footer {
 .footer__line {
   height: 1px;
   width: 100%;
-  background: $orange;
+  background: $accent-color;
 }
 
 .fa-github {
