@@ -5,21 +5,18 @@ import tonkotsuRed from './assets/tonkotsu-red.png';
 const menu = [
   { 
     title: 'Shrimp Wonton Ramen',
-    description: 'Pork and shrimp broth: shrimp & chicken wonton, green onion and kikurage » served with thick noodles',
-    imgSrc: shrimpWonton,
-    imgAlt: 'Shrimp wonton ramen',
+    description: 'Pork and shrimp broth: shrimp & chicken wonton, green onion and kikurage. Served with thick noodles',
+    img: shrimpWonton,
   }, 
   { 
     title: 'Chicken Ramen',
-    description: 'Chicken broth: chicken chashu, spinach, green onion and fried onion » served with thin noodles',
-    imgSrc: chickenRamen,
-    imgAlt: 'Chicken ramen',
+    description: 'Chicken broth: chicken chashu, spinach, green onion and fried onion. Served with thin noodles',
+    img: chickenRamen,
   },
   { 
     title: 'Premium Tonkotsu Red',
-    description: 'Pork broth: pork chashu, kikurage, green onion, seasoned egg, nori dried seaweed, red hot chili oil and spicy bean sprouts » served with thick noodles',
-    imgSrc: tonkotsuRed,
-    imgAlt: 'Tonkotsu red',
+    description: 'Pork broth: pork chashu, kikurage, green onion, seasoned egg, nori dried seaweed, red hot chili oil and spicy bean sprouts. Served with thick noodles',
+    img: tonkotsuRed,
   },
 ]
 

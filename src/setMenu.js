@@ -3,18 +3,20 @@ import menu from './menu';
 
 const setImageModals = () => {
   const modal = document.querySelector('.modal');
+  modal.addEventListener('click', () => modal.style.display = 'none'); 
   const modalImg = document.querySelector('.modal__img');
+  modalImg.addEventListener('click', (e) => e.stopPropagation());
   const images = document.querySelectorAll('.dish img');
 
   images.forEach((img) => {
     img.addEventListener('click', () => {
       modal.style.display = 'block';
       modalImg.src = img.src;
-      modalImg.alt =img.alt;
+      modalImg.alt = img.alt;
     });
   });
 
-  const closeBtn = document.querySelector('.close-btn');
+  const closeBtn = document.querySelector('.modal__btn');
   closeBtn.addEventListener('click', () => modal.style.display = 'none'); 
 }
 
@@ -23,24 +25,28 @@ const setMenu = () => {
   main.setAttribute('class', 'menu');
 
   menu.forEach((dish) => {
-    const { title, description, imgSrc, imgAlt } = dish;
+    const { title, description, img } = dish;
 
     const dishContainer = generateElement('div', 'dish');
-    const dishImage = generateElement('img', false, false, { src: imgSrc, alt: imgAlt });
+    const dishImage = generateElement('img', false, false, { src: img, alt: title });
     dishContainer.appendChild(dishImage);
     
-    const dishTitle = generateElement('div', 'dish__title', title);
+    const dishTitle = generateElement('h2', false, title);
     dishContainer.appendChild(dishTitle);
   
-    const dishDescription = generateElement('div', 'dish__description', description);
+    const dishDescription = generateElement('p', false, description);
     dishContainer.appendChild(dishDescription);
 
     main.appendChild(dishContainer);
   });
 
   const modal = generateElement('div', 'modal');
-  const closeBtn = generateElement('div', 'close-btn', '×');
+
+  const closeBtn = generateElement('button', 'modal__btn');
+  const closeIcon = generateElement('i', 'fa-solid fa-xmark');
+  closeBtn.appendChild(closeIcon);
   modal.appendChild(closeBtn);
+
   const modalImg = generateElement('img', 'modal__img');
   modal.appendChild(modalImg);
 
