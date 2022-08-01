@@ -59,7 +59,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 32px;
-  padding: 40px 5vw;
+  padding: 32px 5vw;
   min-height: 100vh;
   background: $primary-color;
 }
@@ -255,40 +255,38 @@ nav ul {
   align-items: center;
 
   img {
-    width: 45%;
+    width: 50%;
   }
 }
 
 .contact__heading {
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
+  @include flex-col(2vh);
   font-size: 3rem;
   font-weight: 800;
-}
 
-.contact__title {
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
+  h1 {
+    @include flex-col(null);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
 
-.contact__title div:nth-child(2) {
-  color: $accent-color;
+    span:nth-child(2) {
+      color: $accent-color;
+    }
+  }
 }
 
 .contact__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
+  @include flex-col(2.5vh, center);
   font-size: 1.1rem;
   text-align: center;
-}
 
-.phones__title, .address__title {
-  color: $accent-color;
-  font-weight: 700;
+  h2 {
+    font-size: 1.2rem;
+    color: $accent-color;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
 }
 
 // Footer

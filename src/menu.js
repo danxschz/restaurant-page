@@ -1,6 +1,6 @@
-import shrimpWonton from './assets/shrimp-wonton.png';
-import chickenRamen from './assets/chicken-ramen.jpg';
-import tonkotsuRed from './assets/tonkotsu-red.png';
+import shrimpWonton from './assets/dishes/shrimp-wonton.png';
+import chickenRamen from './assets/dishes/chicken-ramen.jpg';
+import tonkotsuRed from './assets/dishes/tonkotsu-red.png';
 
 const menu = [
   { 
