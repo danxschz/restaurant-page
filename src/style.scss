@@ -58,7 +58,7 @@ a {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 32px;
+  gap: 40px;
   padding: 32px 5vw;
   min-height: 100vh;
   background: $clr-background;
@@ -82,16 +82,14 @@ nav ul {
   font-size: 1.2rem;
 
   li {
+    padding: 5px 0;
+    position: relative;
     transition: color 0.3s;
     cursor: pointer;
 
     &:hover {
       color: $clr-primary;
     }
-
-    // Required for partial underline
-    padding-bottom: 5px;
-    position: relative;
   }
 }
 
@@ -173,10 +171,14 @@ nav ul {
 
 // Menu
 .menu {
+  @include flex-col(52px, center);
+}
+
+.menu__items {
   display: grid;
-  align-content: center;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 5vw;
+  column-gap: 5vw;
+  row-gap: 52px;
 }
 
 .dish {

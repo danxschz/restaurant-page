@@ -1,5 +1,5 @@
 import generateElement from 'generate-element';
-import menu from './menu';
+import dishes from './dishes';
 
 const setImageModals = () => {
   const modal = document.querySelector('.modal');
@@ -23,8 +23,11 @@ const setImageModals = () => {
 const setMenu = () => {
   const main = document.querySelector('main');
   main.setAttribute('class', 'menu');
+  const heading = generateElement('h1', false, 'Our Menu');
+  main.appendChild(heading);
 
-  menu.forEach((dish) => {
+  const menuItems = generateElement('div', 'menu__items');
+  dishes.forEach((dish) => {
     const { title, description, img } = dish;
 
     const dishContainer = generateElement('div', 'dish');
@@ -37,8 +40,10 @@ const setMenu = () => {
     const dishDescription = generateElement('p', false, description);
     dishContainer.appendChild(dishDescription);
 
-    main.appendChild(dishContainer);
+    menuItems.appendChild(dishContainer);
   });
+
+  main.appendChild(menuItems);
 
   const modal = generateElement('div', 'modal');
 
