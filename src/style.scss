@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
 // Variables
-$primary-color: #EBE0CE;
-$accent-color: #ED3C20;
-$text-color: #272624;
+$clr-background: #EBE0CE;
+$clr-primary: #ED3C20;
+$clr-text: #272624;
 $system-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 
 // Mixins
@@ -33,7 +33,7 @@ $system-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, sego
 
 body {
   font-family: 'Mulish', $system-font-stack;
-  color: $text-color;
+  color: $clr-text;
 }
 
 h1, h2, h3, ul, p {
@@ -50,7 +50,7 @@ button {
 }
 
 a {
-  color: $accent-color;
+  color: $clr-primary;
   text-decoration: none;
 }
 
@@ -61,7 +61,7 @@ body {
   gap: 32px;
   padding: 32px 5vw;
   min-height: 100vh;
-  background: $primary-color;
+  background: $clr-background;
 }
 
 // Header
@@ -73,7 +73,7 @@ header {
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: 0.5rem;
-  color: $accent-color;
+  color: $clr-primary;
   text-transform: uppercase;
 }
 
@@ -86,7 +86,7 @@ nav ul {
     cursor: pointer;
 
     &:hover {
-      color: $accent-color;
+      color: $clr-primary;
     }
 
     // Required for partial underline
@@ -96,7 +96,7 @@ nav ul {
 }
 
 .selected {
-  color: $accent-color;
+  color: $clr-primary;
 }
 
 .selected::before {
@@ -105,7 +105,7 @@ nav ul {
   width: 1rem;
   height: 2px;
   bottom: 0;
-  background: $text-color;
+  background: $clr-text;
 }
 
 // Home
@@ -125,7 +125,7 @@ nav ul {
     max-width: 17ch;
 
     span {
-      color: $accent-color;
+      color: $clr-primary;
     }
   }
 
@@ -139,7 +139,7 @@ nav ul {
     border: none;
     border-radius: 4px;
     margin-top: 10px;
-    background: $accent-color;
+    background: $clr-primary;
     color: white;
     font-weight: 600;
 
@@ -152,21 +152,22 @@ nav ul {
 .jap-phrase {
   font-size: 3rem;
   font-family: 'Noto Sans JP', $system-font-stack;
-  color: $accent-color;
+  color: $clr-primary;
 }
 
 .wavy-line {
   // Letter spacing = (font-size / 6.25) * -1
   font-size: 2.3rem;
   letter-spacing: -0.368rem;
-  color: $text-color;
+  color: $clr-text;
 }
 
 .home__img {
   @include flex-row(null, center, center);
 
   img {
-    width: clamp(100px, 45%, 550px);
+    width: clamp(200px, 45%, 550px);
+    height: auto;
   }
 }
 
@@ -192,7 +193,7 @@ nav ul {
   }
 
   h2 {
-    color: $accent-color;
+    color: $clr-primary;
     font-size: 1.2rem;
     font-weight: 600;
   }
@@ -236,7 +237,7 @@ nav ul {
   right: 30px;
   border: none;
   background: none;
-  color: $accent-color;
+  color: $clr-primary;
   font-size: 2.3rem;
 
   i {
@@ -271,7 +272,7 @@ nav ul {
     text-transform: uppercase;
 
     span:nth-child(2) {
-      color: $accent-color;
+      color: $clr-primary;
     }
   }
 }
@@ -283,7 +284,7 @@ nav ul {
 
   h2 {
     font-size: 1.2rem;
-    color: $accent-color;
+    color: $clr-primary;
     font-weight: 600;
     margin-bottom: 4px;
   }
@@ -303,18 +304,18 @@ footer {
 
   li a {
     &:hover {
-      color: darken($accent-color, 8%);
+      color: darken($clr-primary, 8%);
     }
 
     &:active {
-      color: darken($accent-color, 12%);
+      color: darken($clr-primary, 12%);
     }
   }
 
   hr {
     height: 1px;
     width: 100%;
-    background: $accent-color;
+    background: $clr-primary;
     border: none;
   }
 }
