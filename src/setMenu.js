@@ -1,5 +1,6 @@
-import generateElement from 'generate-element';
+import './styles/menu.scss';
 import dishes from './dishes';
+import generateElement from 'generate-element';
 
 const setImageModals = () => {
   const modal = document.querySelector('.modal');

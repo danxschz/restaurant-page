@@ -1,0 +1,82 @@
+@import './shared';
+
+.menu {
+  @include flex-col(52px, center);
+}
+
+.menu__items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  column-gap: 5vw;
+  row-gap: 52px;
+}
+
+.dish {
+  @include flex-col(2vh, center);
+  text-align: center;
+
+  img {
+    width: 80%;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+
+  h2 {
+    color: $clr-primary;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: clamp(200px, 40%, 1000px);
+}
+
+.modal__btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: none;
+  background: none;
+  color: $clr-primary;
+  font-size: 2.3rem;
+
+  i {
+    transition: transform 0.3s;
+  }
+
+  &:hover i, &:focus i, &:active i {
+    transform: rotate(90deg);
+  }
+}

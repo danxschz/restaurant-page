@@ -1,5 +1,5 @@
-import './normalize.css';
-import './style.scss';
+import './styles/normalize.css';
+import './styles/index.scss';
 // Keep html import to avoid imgs disappearing on webpack --watch
 import html from './index.html';
 import setTabStyle, { clearMain } from './setTabStyle';

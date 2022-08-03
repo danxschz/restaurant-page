@@ -1,3 +1,5 @@
+import './styles/home.scss';
+
 const cloneHome = () => {
   const main = document.querySelector('main');
   return main.cloneNode(true);

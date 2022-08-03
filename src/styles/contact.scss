@@ -1,0 +1,41 @@
+@import './shared';
+
+.contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
+}
+
+.contact__heading {
+  @include flex-col(2vh);
+  font-size: 3rem;
+  font-weight: 800;
+
+  h1 {
+    @include flex-col(null);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    span:nth-child(2) {
+      color: $clr-primary;
+    }
+  }
+}
+
+.contact__info {
+  @include flex-col(2.5vh, center);
+  font-size: 1.1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 1.2rem;
+    color: $clr-primary;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+}

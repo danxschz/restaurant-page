@@ -1,0 +1,21 @@
+// Variables
+$clr-background: #EBE0CE;
+$clr-primary: #ED3C20;
+$clr-text: #272624;
+$system-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+// Mixins
+@mixin flex-row($gap, $align: null, $justify: null) {
+  display: flex;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-col($gap, $align: null, $justify: null) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+}

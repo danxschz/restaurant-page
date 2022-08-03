@@ -1,5 +1,6 @@
-import generateElement from 'generate-element';
+import './styles/contact.scss';
 import locationImg from './assets/location.png';
+import generateElement from 'generate-element';
 
 const setContactUs = () => {
   const main = document.querySelector('main');
