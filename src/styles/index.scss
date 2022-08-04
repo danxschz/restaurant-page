@@ -38,7 +38,6 @@ a {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 40px;
   min-height: 100vh;
   padding-block: 2rem;
   background: $clr-background;
@@ -49,6 +48,14 @@ header {
   @include flex-row(null, center, space-between);
   width: min(92%, 1500px);
   margin-inline: auto;
+
+  button {
+    display: none;
+    border: none;
+    background: none;
+    color: $clr-primary;
+    font-size: 1.5rem;
+  }
 }
 
 .logo {
@@ -57,13 +64,12 @@ header {
   letter-spacing: 0.5rem;
   color: $clr-primary;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 nav ul {
-  @include flex-row(6vw);
-  font-size: 1.2rem;
-
   li {
+    font-size: 1.2rem;
     padding: 5px 0;
     position: relative;
     transition: color 0.3s;
@@ -73,6 +79,10 @@ nav ul {
       color: $clr-primary;
     }
   }
+}
+
+.nav ul {
+  @include flex-row(6vw);
 }
 
 .selected {
@@ -88,10 +98,43 @@ nav ul {
   background: $clr-text;
 }
 
+.overlay {
+  background: rgba(0, 0, 0);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.mobile-nav {
+  @include flex-col(24px);
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  background: $clr-background;
+  transition: width 0.5s;
+
+  > * {
+    width: 280px;
+    padding: 0.5rem 1rem; 
+  }
+
+  ul {
+    @include flex-col(24px);
+  }
+}
+
 // Main
 main {
   width: min(92%, 1500px);
   margin-inline: auto;
+  margin-block: 40px; 
 }
 
 // Footer
@@ -136,6 +179,22 @@ footer {
 @media (max-width: 600px) {
   body {
     padding-block: 0.5rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  header button {
+    display: block;
+  }
+
+  .selected::before {
+    width: 0.5rem;
   }
 
   hr {

@@ -9,16 +9,17 @@ import setContactUs from './setContactUs';
 
 // Home
 const homeElement = cloneHome();
-const homeBtn = document.querySelector('.nav__home')
-
 const handleHome = (e) => {
   setTabStyle(e);
   setHome(homeElement);
 }
 
-homeBtn.addEventListener('click', handleHome);
-homeBtn.addEventListener('keypress', (e) => {
-  if (e.key === ' ' || e.key === 'Enter') handleHome(e);
+const homeBtns = document.querySelectorAll('.nav__home')
+homeBtns.forEach((btn) => {
+  btn.addEventListener('click', handleHome);
+  btn.addEventListener('keypress', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') handleHome(e);
+  });
 });
 
 // Menu
@@ -28,10 +29,12 @@ const handleMenu = (e) => {
   setMenu();
 }
 
-const menuBtn = document.querySelector('.nav__menu')
-menuBtn.addEventListener('click', handleMenu);
-menuBtn.addEventListener('keypress', (e) => {
-  if (e.key === ' ' || e.key === 'Enter') handleMenu(e);
+const menuBtns = document.querySelectorAll('.nav__menu');
+menuBtns.forEach((btn) => {
+  btn.addEventListener('click', handleMenu);
+  btn.addEventListener('keypress', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') handleMenu(e);
+  });
 });
 
 // Contact Us
@@ -41,8 +44,31 @@ const handleContactUs = (e) => {
   setContactUs();
 }
 
-const contactBtn = document.querySelector('.nav__contact');
-contactBtn.addEventListener('click', handleContactUs);
-contactBtn.addEventListener('keypress', (e) => {
-  if (e.key === ' ' || e.key === 'Enter') handleContactUs(e);
+const contactBtns = document.querySelectorAll('.nav__contact');
+contactBtns.forEach((btn) => {
+  btn.addEventListener('click', handleContactUs);
+  btn.addEventListener('keypress', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') handleContactUs(e);
+  });
 });
+
+// Mobile nav
+const openNav = () => {
+  document.querySelector('.mobile-nav').style.width = '280px';
+  document.querySelector('.overlay').style.position = 'fixed';
+  document.querySelector('.overlay').style.opacity = 0.6;
+}
+
+const closeNav = () => {
+  document.querySelector('.mobile-nav').style.width = 0;
+  document.querySelector('.overlay').style.opacity = 0;
+  setTimeout(() => {
+    document.querySelector('.overlay').style.position = 'static';
+  }, 500);
+}
+
+const navBtn = document.querySelector('header button');
+navBtn.addEventListener('click', openNav);
+
+const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', closeNav);
