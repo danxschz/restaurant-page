@@ -1,9 +1,9 @@
 <div align="center">
   <img src="src/assets/logo.png" alt="logo" width="200" height="auto">
-  <h1>Restaurant Page</h1>
+  <h1>Yumi: Restaurant Website</h1>
 
   <p>
-  Restaurant web page for a fictional ramen establishment named Yumi
+  Fictional ramen establishment website
   </p>
 
   <p>
@@ -42,9 +42,9 @@
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Primary Color | #EBE0CE |
-| Accent Color | #00ADB5 |
-| Text Color | #ED3C20 |
+| Background | #EBE0CE |
+| Primary | #ED3C20 |
+| Text | #272624 |
 
 ## Getting Started
 
@@ -76,4 +76,4 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 
-Daniel Sanchez - danxschz@gmail.com
+Daniel Sanchez (@danxschz) - danxschz@gmail.com
