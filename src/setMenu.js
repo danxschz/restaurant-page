@@ -32,7 +32,7 @@ const setMenu = () => {
     const { title, description, img } = dish;
 
     const dishContainer = generateElement('div', 'dish');
-    const dishImage = generateElement('img', false, false, { src: img, alt: title });
+    const dishImage = generateElement('img', false, false, { src: img, alt: title, width: 600, height: 600 });
     dishContainer.appendChild(dishImage);
     
     const dishTitle = generateElement('h2', false, title);

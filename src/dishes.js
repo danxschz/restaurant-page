@@ -1,6 +1,6 @@
-import shrimpWonton from './assets/dishes/shrimp-wonton.png';
 import chickenRamen from './assets/dishes/chicken-ramen.jpg';
 import tonkotsuRed from './assets/dishes/tonkotsu-red.png';
+import shrimpWonton from './assets/dishes/shrimp-wonton.png';
 import spicyChicken from './assets/dishes/spicy-chicken-ramen.jpg';
 import tonkotsuBlack from './assets/dishes/tonkotsu-black.jpg';
 import wontonChicken from './assets/dishes/wonton-chicken-ramen.jpg';
@@ -8,11 +8,6 @@ import yuzuShio from './assets/dishes/yuzu-shio-delight.jpg';
 import spicyUmami from './assets/dishes/spicy-umami.png';
 
 const dishes = [
-  { 
-    title: 'Shrimp Wonton Ramen',
-    description: 'Pork and shrimp broth: shrimp & chicken wonton, green onion and kikurage. Served with thick noodles',
-    img: shrimpWonton,
-  }, 
   { 
     title: 'Chicken Ramen',
     description: 'Chicken broth: chicken chashu, spinach, green onion and fried onion. Served with thin noodles',
@@ -23,6 +18,11 @@ const dishes = [
     description: 'Pork broth: pork chashu, kikurage, green onion, seasoned egg, nori dried seaweed, red hot chili oil and spicy bean sprouts. Served with thick noodles',
     img: tonkotsuRed,
   },
+  { 
+    title: 'Shrimp Wonton Ramen',
+    description: 'Pork and shrimp broth: shrimp & chicken wonton, green onion and kikurage. Served with thick noodles',
+    img: shrimpWonton,
+  }, 
   { 
     title: 'Spicy Chicken Ramen',
     description: 'Chicken broth: chicken chashu, spinach, spicy bean sprouts and green onion. Served with thin noodles',

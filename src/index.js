@@ -54,9 +54,9 @@ contactBtns.forEach((btn) => {
 
 // Mobile nav
 const openNav = () => {
-  document.querySelector('.mobile-nav').style.width = '280px';
+  document.querySelector('.mobile-nav').style.width = '75%';
   document.querySelector('.overlay').style.height = 'auto';
-  document.querySelector('.overlay').style.opacity = 0.6;
+  document.querySelector('.overlay').style.opacity = 0.7;
 }
 
 const closeNav = () => {
