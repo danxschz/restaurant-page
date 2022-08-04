@@ -42,7 +42,7 @@ const setContactUs = () => {
   address.appendChild(addressDescription);
   info.appendChild(address);
 
-  const location = generateElement('img', false, false, { src: locationImg });
+  const location = generateElement('img', false, false, { src: locationImg, alt: "Yumi's Location", width: 700, height: 500 });
   info.appendChild(location);
 
   main.appendChild(info);

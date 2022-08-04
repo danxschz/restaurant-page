@@ -4,10 +4,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-
-  img {
-    width: 50%;
-  }
 }
 
 .contact__heading {
@@ -37,5 +33,30 @@
     color: $clr-primary;
     font-weight: 600;
     margin-bottom: 4px;
+  }
+
+  img {
+    width: clamp(200px, 50%, 700px);
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    grid-template-columns: 1fr;
+    row-gap: 2vh;
+
+    .jap-phrase {
+      font-size: 2.8rem;
+    }
+  }
+
+  .contact__heading {
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2.8rem;
+    }
   }
 }

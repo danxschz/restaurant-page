@@ -55,7 +55,7 @@ contactBtns.forEach((btn) => {
 // Mobile nav
 const openNav = () => {
   document.querySelector('.mobile-nav').style.width = '280px';
-  document.querySelector('.overlay').style.position = 'fixed';
+  document.querySelector('.overlay').style.height = 'auto';
   document.querySelector('.overlay').style.opacity = 0.6;
 }
 
@@ -63,7 +63,7 @@ const closeNav = () => {
   document.querySelector('.mobile-nav').style.width = 0;
   document.querySelector('.overlay').style.opacity = 0;
   setTimeout(() => {
-    document.querySelector('.overlay').style.position = 'static';
+    document.querySelector('.overlay').style.height = 0;
   }, 500);
 }
 
