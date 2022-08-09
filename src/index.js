@@ -67,8 +67,15 @@ const closeNav = () => {
   }, 500);
 }
 
+const resetNavOnRotate = () => {
+  document.querySelector('.mobile-nav').removeAttribute('style');
+  document.querySelector('.overlay').removeAttribute('style');
+}
+
 const navBtn = document.querySelector('header button');
 navBtn.addEventListener('click', openNav);
 
 const overlay = document.querySelector('.overlay');
 overlay.addEventListener('click', closeNav);
+
+screen.orientation.addEventListener('change', resetNavOnRotate);
