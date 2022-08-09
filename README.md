@@ -3,7 +3,7 @@
   <h1>Yumi: Restaurant Website</h1>
 
   <p>
-  Fictional ramen establishment website
+  Ramen establishment website with home, menu and contact section
   </p>
 
   <p>
@@ -29,6 +29,16 @@
 
 ## About the Project
 
+### Screenshots
+
+<div align="center">
+  <h3>Desktop</h3>
+  <img src="screenshots/desktop.png" alt="desktop page" width="600" height="auto"/>
+
+  <h3>Mobile</h3>
+  <img src="screenshots/mobile.png" alt="mobile page" width="400" height="auto"/>
+</div>
+
 ### Built With
 
 - HTML
@@ -40,11 +50,11 @@
 
 ### Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
+| Color      | Hex     |
+| :--------: | :-----: |
 | Background | #EBE0CE |
-| Primary | #ED3C20 |
-| Text | #272624 |
+| Primary    | #ED3C20 |
+| Text       | #272624 |
 
 ## Getting Started
 
