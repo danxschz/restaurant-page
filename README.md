@@ -3,7 +3,7 @@
   <h1>Yumi: Restaurant Website</h1>
 
   <p>
-  Ramen establishment website with home, menu and contact section
+  Ramen establishment website with Home, Menu and Contact pages
   </p>
 
   <p>
@@ -19,7 +19,7 @@
   </p>
 
   <h4>
-    <a href="https://danxschz.github.io/restaurant-page">View Demo</a>
+    <a href="https://yum.danxschz.com">View Demo</a>
     <span> · </span>
     <a href="https://github.com/danxschz/restaurant-page/issues/">Report Bug</a>
   </h4>
@@ -45,8 +45,8 @@
 - CSS
 - JavaScript
 - Sass
+- Webpack
 - npm
-- webpack
 
 ### Color Reference
 
@@ -86,4 +86,4 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 
-Daniel Sanchez (@danxschz) - danxschz@gmail.com
+Daniel Sanchez (@danxschz) · [Portfolio](https://danxschz.com/) · danxschz@gmail.com
